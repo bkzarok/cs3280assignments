@@ -1,0 +1,10 @@
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\bin\Debug\Assignment1form.exe.config
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\bin\Debug\Assignment1form.exe
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\bin\Debug\Assignment1form.pdb
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\obj\Debug\Assignment1form.csprojAssemblyReference.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\obj\Debug\Assignment1form.Form1.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\obj\Debug\Assignment1form.Properties.Resources.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\obj\Debug\Assignment1form.csproj.GenerateResource.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\obj\Debug\Assignment1form.csproj.CoreCompileInputs.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\obj\Debug\Assignment1form.exe
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1form\obj\Debug\Assignment1form.pdb

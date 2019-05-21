@@ -1,0 +1,7 @@
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1console\bin\Debug\Assignment1console.exe.config
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1console\bin\Debug\Assignment1console.exe
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1console\bin\Debug\Assignment1console.pdb
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1console\obj\Debug\Assignment1console.csprojAssemblyReference.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1console\obj\Debug\Assignment1console.csproj.CoreCompileInputs.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1console\obj\Debug\Assignment1console.exe
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment1form\Assignment1console\obj\Debug\Assignment1console.pdb
