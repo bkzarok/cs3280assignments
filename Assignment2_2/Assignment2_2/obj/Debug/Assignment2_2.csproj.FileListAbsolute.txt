@@ -6,5 +6,5 @@ C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2_2\Assignment2_2\obj\
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2_2\Assignment2_2\obj\Debug\Assignment2_2.csproj.CoreCompileInputs.cache
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2_2\Assignment2_2\obj\Debug\Assignment2_2.exe
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2_2\Assignment2_2\obj\Debug\Assignment2_2.pdb
-C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2_2\Assignment2_2\obj\Debug\Assignment2_2.csprojAssemblyReference.cache
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2_2\Assignment2_2\obj\Debug\Assignment2_2.Form1.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2_2\Assignment2_2\obj\Debug\Assignment2_2.csprojAssemblyReference.cache

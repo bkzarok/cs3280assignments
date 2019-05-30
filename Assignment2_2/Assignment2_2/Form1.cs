@@ -22,21 +22,21 @@ namespace Assignment2_2
         public Form1()
         {
             InitializeComponent();
-            richTextBox1.Text =  "FACE   FREQUENCY   PERCENT     TIMES GUESSED\n"
+            richTextBox1.Text = "FACE\t   FREQUENCY\t       PERCENT\tTIMES GUESSED\n"
 
-                                 +"1                   0                    0%                  0\n"
+                                 + "1\t\t0\t\t0%\t\t0\n"
+                                 + "2\t\t0\t\t0%\t\t0\n"
+                                 + "3\t\t0\t\t0%\t\t0\n"
+                                 + "4\t\t0\t\t0%\t\t0\n"
+                                 + "5\t\t0\t\t0%\t\t0\n"
+                                 + "6\t\t0\t\t0%\t\t0\n";
 
-                                 +"2                   0                    0%                  0\n"
-   
-                                 +"3                   0                    0%                  0\n"
-            
-                                 +"4                   0                    0%                  0\n"
-           
-                                 +"5                   0                    0%                  0\n"
-          
-                                 +"6                   0                    0%                  0";
+
+
         }
-      
+
+
+
         private void Button1_Click(object sender, EventArgs e)
         {
 
@@ -51,31 +51,33 @@ namespace Assignment2_2
                 timesguessed[faceguessed] += 1;
                 
                 Random random = new Random();
+                int dice =0;
 
                 for (int i = 1; i < 7; i++)
                 {
           
-                    int dice = random.Next(1, 7);
+                    dice = random.Next(1, 7);
                     
-                    //Check if won or lost
-                    if (value == dice)
-                    {
-                        timeswon += 1;
-                    }
-                    else
-                    {
-                        timeslost += 1;
-                    }
-
-                    //add dice value to the frequency arra
-                    int face = dice - 1;
-                    frequency[face] += 1;
-
+                   
                     //show image's of dice roll
                     pictureBox1.Image = (Image)(Properties.Resources.ResourceManager.GetObject($"die{dice}"));
                     pictureBox1.Refresh();
                     Thread.Sleep(300);
                 }
+                //Check if won or lost
+                if (value == dice)
+                {
+                    timeswon += 1;
+                }
+                else
+                {
+                    timeslost += 1;
+                }
+
+                //increment dice value to the frequency array
+                int face = dice - 1;
+                frequency[face] += 1;
+
                 label6.Text = $"your last guess:{value}";
                 printValues();
             }
@@ -83,7 +85,8 @@ namespace Assignment2_2
             {
                 label6.Text = "Invalid input please type a number between 1-6, try again.";
             }
-            
+
+          
         }
 
         void resetValue()
@@ -103,16 +106,15 @@ namespace Assignment2_2
             label3.Text = $"Number of Times Won: {timeswon}";
             label4.Text = $"Number of Time Lost: {timeslost}";
 
-            richTextBox1.Text = "FACE   FREQUENCY   PERCENT     TIMES GUESSED\n";
+            richTextBox1.Text = "FACE\t   FREQUENCY\t       PERCENT\tTIMES GUESSED\n";
 
             for (int i = 0; i <= 5; i++)
             {
                 double percentage = (double) frequency[i] / (timesplayed * 6);
-                richTextBox1.Text += $"{i + 1}                   {frequency[i]}       " +
-                     $"             {percentage*100:f3}%                  {timesguessed[i]}\n";
+                richTextBox1.Text += $"{i + 1}\t\t{frequency[i]}\t\t{percentage*100:f3}%\t\t{timesguessed[i]}\n";
             }
         }
-
+        
         private void Button2_Click(object sender, EventArgs e)
         {
             resetValue();
