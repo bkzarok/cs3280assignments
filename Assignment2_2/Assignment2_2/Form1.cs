@@ -110,11 +110,9 @@ namespace Assignment2_2
 
             for (int i = 0; i <= 5; i++)
             {
-<<<<<<< HEAD
+
                 double percentage = (double) frequency[i] / (timesplayed );
-=======
-                double percentage = (double) frequency[i] / (timesplayed);
->>>>>>> 4778d9b79fef28cb4fb6622ae451a2ba16c36b16
+
                 richTextBox1.Text += $"{i + 1}\t\t{frequency[i]}\t\t{percentage*100:f3}%\t\t{timesguessed[i]}\n";
             }
         }
