@@ -52,6 +52,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.display_score = new System.Windows.Forms.Button();
             this.display_score_text_area = new System.Windows.Forms.TextBox();
+            this.save_file_bttn = new System.Windows.Forms.Button();
+            this.save_file_textbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -102,6 +105,7 @@
             // 
             // reset_scores
             // 
+            this.reset_scores.Enabled = false;
             this.reset_scores.Location = new System.Drawing.Point(511, 25);
             this.reset_scores.Name = "reset_scores";
             this.reset_scores.Size = new System.Drawing.Size(81, 75);
@@ -112,6 +116,7 @@
             // 
             // first_student
             // 
+            this.first_student.Enabled = false;
             this.first_student.Location = new System.Drawing.Point(19, 19);
             this.first_student.Name = "first_student";
             this.first_student.Size = new System.Drawing.Size(97, 23);
@@ -122,6 +127,7 @@
             // 
             // previouse_student
             // 
+            this.previouse_student.Enabled = false;
             this.previouse_student.Location = new System.Drawing.Point(151, 19);
             this.previouse_student.Name = "previouse_student";
             this.previouse_student.Size = new System.Drawing.Size(113, 23);
@@ -132,6 +138,7 @@
             // 
             // next_student
             // 
+            this.next_student.Enabled = false;
             this.next_student.Location = new System.Drawing.Point(288, 19);
             this.next_student.Name = "next_student";
             this.next_student.Size = new System.Drawing.Size(99, 23);
@@ -142,6 +149,7 @@
             // 
             // last_student
             // 
+            this.last_student.Enabled = false;
             this.last_student.Location = new System.Drawing.Point(426, 19);
             this.last_student.Name = "last_student";
             this.last_student.Size = new System.Drawing.Size(116, 23);
@@ -161,6 +169,7 @@
             // 
             // student_number
             // 
+            this.student_number.Enabled = false;
             this.student_number.Location = new System.Drawing.Point(115, 19);
             this.student_number.Name = "student_number";
             this.student_number.Size = new System.Drawing.Size(100, 20);
@@ -168,6 +177,7 @@
             // 
             // save_name
             // 
+            this.save_name.Enabled = false;
             this.save_name.Location = new System.Drawing.Point(249, 16);
             this.save_name.Name = "save_name";
             this.save_name.Size = new System.Drawing.Size(75, 23);
@@ -231,6 +241,7 @@
             // 
             // save_score
             // 
+            this.save_score.Enabled = false;
             this.save_score.Location = new System.Drawing.Point(288, 48);
             this.save_score.Name = "save_score";
             this.save_score.Size = new System.Drawing.Size(75, 23);
@@ -250,6 +261,7 @@
             // 
             // assignment_score
             // 
+            this.assignment_score.Enabled = false;
             this.assignment_score.Location = new System.Drawing.Point(151, 58);
             this.assignment_score.Name = "assignment_score";
             this.assignment_score.Size = new System.Drawing.Size(100, 20);
@@ -257,6 +269,7 @@
             // 
             // enter_assignment
             // 
+            this.enter_assignment.Enabled = false;
             this.enter_assignment.Location = new System.Drawing.Point(151, 31);
             this.enter_assignment.Name = "enter_assignment";
             this.enter_assignment.Size = new System.Drawing.Size(100, 20);
@@ -273,6 +286,7 @@
             // 
             // display_score
             // 
+            this.display_score.Enabled = false;
             this.display_score.Location = new System.Drawing.Point(179, 341);
             this.display_score.Name = "display_score";
             this.display_score.Size = new System.Drawing.Size(102, 23);
@@ -283,17 +297,49 @@
             // 
             // display_score_text_area
             // 
+            this.display_score_text_area.Enabled = false;
             this.display_score_text_area.Location = new System.Drawing.Point(25, 370);
             this.display_score_text_area.Multiline = true;
             this.display_score_text_area.Name = "display_score_text_area";
-            this.display_score_text_area.Size = new System.Drawing.Size(545, 131);
+            this.display_score_text_area.Size = new System.Drawing.Size(545, 116);
             this.display_score_text_area.TabIndex = 21;
+            // 
+            // save_file_bttn
+            // 
+            this.save_file_bttn.Enabled = false;
+            this.save_file_bttn.Location = new System.Drawing.Point(582, 510);
+            this.save_file_bttn.Name = "save_file_bttn";
+            this.save_file_bttn.Size = new System.Drawing.Size(75, 23);
+            this.save_file_bttn.TabIndex = 22;
+            this.save_file_bttn.Text = "Save File";
+            this.save_file_bttn.UseVisualStyleBackColor = true;
+            this.save_file_bttn.Click += new System.EventHandler(this.Save_file_bttn_Click);
+            // 
+            // save_file_textbox
+            // 
+            this.save_file_textbox.Enabled = false;
+            this.save_file_textbox.Location = new System.Drawing.Point(347, 510);
+            this.save_file_textbox.Name = "save_file_textbox";
+            this.save_file_textbox.Size = new System.Drawing.Size(190, 20);
+            this.save_file_textbox.TabIndex = 23;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(212, 515);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Save File Enter Name:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 526);
+            this.ClientSize = new System.Drawing.Size(800, 542);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.save_file_textbox);
+            this.Controls.Add(this.save_file_bttn);
             this.Controls.Add(this.display_score_text_area);
             this.Controls.Add(this.display_score);
             this.Controls.Add(this.groupBox4);
@@ -340,6 +386,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button display_score;
         private System.Windows.Forms.TextBox display_score_text_area;
+        private System.Windows.Forms.Button save_file_bttn;
+        private System.Windows.Forms.TextBox save_file_textbox;
+        private System.Windows.Forms.Label label5;
     }
 }
 
