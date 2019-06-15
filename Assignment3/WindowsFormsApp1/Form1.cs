@@ -14,8 +14,12 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+
         private string[] student_information;
-        private int[] student_assigments;
+        private int[,] student_assigments;
+        private int nav_student = 0;
+        private int student_num = 0;
+        private int assign_num = 0;
         public Form1()
         {
             InitializeComponent();
@@ -24,59 +28,125 @@ namespace WindowsFormsApp1
 
         private void Submit_count_Click(object sender, EventArgs e)
         {
-            if (num_of_assignments.Text == "" || num_of_students.Text == "")
-            { }
-            else
-            {
-                student_information = new string[Convert.ToInt32(num_of_students.Text)];
-                student_assigments = new int[Convert.ToInt32(num_of_assignments.Text)];
-                Enable_Form();
-            }
 
+            try
+            {
+                student_num = Convert.ToInt32(num_of_students.Text);
+               
+                if (int.TryParse(num_of_assignments.Text, out assign_num) && assign_num >= 1 && assign_num <= 6)
+                { 
+                    student_information = new string[student_num];
+                    student_assigments = new int[student_num, assign_num];
+                    Enable_Form();
+                    Populate_Arrays();
+                    student_number_textbox.Text = student_information[0];
+                    label6.Text = $"Student #{1}";
+                    display_score_richtextbox.Text =
+                    "Student\t\t\t #1\t#2\t#3\t#4\t#5\tAVG\tGRADE\n";
+                 }
+                else { throw new Exception(); }
+            }
+            catch(Exception h){
+                MessageBox.Show("Enter a value that's a number only on both fields ");
+                Reset_CountField();
+            }
         }
 
         private void Reset_scores_Click(object sender, EventArgs e)
         {
             Disable_Form();
+            Reset_CountField();
         }
 
         private void First_student_Click(object sender, EventArgs e)
         {
 
+                nav_student = 0;
+                student_number_textbox.Text = student_information[0];
+                label6.Text = $"Student #{1}";
+             
+
         }
         private void Previouse_student_Click(object sender, EventArgs e)
         {
-
+            nav_student = nav_student - 1;
+            if (nav_student < 0)
+            {
+            }
+            else
+            {
+                student_number_textbox.Text = student_information[nav_student];
+                label6.Text = $"Student #{nav_student+1}";
+            }
         }
         private void Next_student_Click(object sender, EventArgs e)
         {
-
+            nav_student = nav_student + 1;
+            
+            if (nav_student > student_num-1)
+            {
+            }
+            else
+            {
+                student_number_textbox.Text = student_information[nav_student];
+                label6.Text = $"Student #{nav_student+1}";
+            }
         }
 
         private void Last_student_Click(object sender, EventArgs e)
         {
-
+            nav_student = student_num - 1;
+            student_number_textbox.Text = student_information[nav_student];
+            label6.Text = $"Student #{student_num}";
+           
         }
 
         private void Save_name_Click(object sender, EventArgs e)
         {
-
+           
+                student_information[nav_student] = student_number_textbox.Text;
+            
         }
 
         private void Save_score_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int assign_value = 0;
+                if (int.TryParse(enter_assignment_textbox.Text, out assign_value) && assign_value >= 1 && assign_value <= 5)
+                {
+                    student_assigments[nav_student, assign_value - 1]
+                       = Convert.ToInt32(assignment_score_textbox.Text);
+                }
+                else { throw new Exception(); }
+            }
+            catch (Exception h)
+            {
+                MessageBox.Show("Enter a value that's a number only on both fields And on a number" +
+                    "between 1-5 on the Assignment# field ");
+                Reset_CountField();
+            }
 
+            enter_assignment_textbox.Text = "";
+            assignment_score_textbox.Text = "";
+            
         }
 
         private void Display_score_Click(object sender, EventArgs e)
         {
-
+            displayScore();
         }
 
         private void Save_file_bttn_Click(object sender, EventArgs e)
         {
-
+            displayScore();
+            string[] allLines = display_score_richtextbox.Text.Split('\n');
+            if (!save_file_textbox.Text.Equals(""))
+            { OutputStringToFile(save_file_textbox.Text, allLines); }
+            save_file_textbox.Text = "";
         }
+
+       
 
         /// <summary>
         /// Outputs the string array to file. Each element in the array is a line of text.
@@ -104,6 +174,7 @@ namespace WindowsFormsApp1
                             writer.WriteLine(outputLines[i] + "\n");
                     }
 
+                    MessageBox.Show($"Success!\nSaved as: {fileName}\n At Location: \n{filePath}");
                 }
             }
             catch (Exception ex)
@@ -115,42 +186,123 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void displayScore()
+        {
+            display_score_richtextbox.Text = "";
+            display_score_richtextbox.Text +=
+                   $"Student\t\t\t #1\t#2\t#3\t#4\t#5\tAVG\tGRADE\n";
+            for (int i = 0; i < student_num; i++)
+            {
+
+                display_score_richtextbox.Text +=
+
+                $"{student_information[i]}" +
+                $"\t\t{student_assigments[i, 0]}" +
+                $"\t{student_assigments[i, 1]}" +
+                $"\t{student_assigments[i, 2]}" +
+                $"\t{student_assigments[i, 3]}" +
+                $"\t{student_assigments[i, 4]}" +
+                $"\t{Avarage(i)}" +
+                $"\t{Grade(Avarage(i))}\n";
+
+            }
+        }
+        private double Avarage(int indexrow)
+        {
+            double result = (student_assigments[indexrow, 0] +
+                            student_assigments[indexrow, 1] +
+                            student_assigments[indexrow, 2] +
+                            student_assigments[indexrow, 3] +
+                            student_assigments[indexrow, 4]) / 5;
+
+            return result;
+        }
+
+        private char Grade(double avg)
+        {
+
+            if (avg >= 90.0)
+            {
+                return 'A';
+            }
+
+            if (avg >= 80.0)
+            {
+                return 'B';
+            }
+
+            if (avg >= 70.0)
+            {
+                return 'C';
+            }
+
+            if (avg >= 60.0)
+            {
+                return 'D';
+            }
+
+            return 'F';
+        }
+        private void Reset_CountField()
+        {
+            num_of_students.Text = "";
+            num_of_assignments.Text = "";
+        }
         private void Enable_Form()
         {
-          
+
+            num_of_assignments.Enabled = false;
+            num_of_students.Enabled = false;
+            submit_count.Enabled = false;
             reset_scores.Enabled = true;
             first_student.Enabled = true;
             previouse_student.Enabled = true;
             next_student.Enabled = true;
             last_student.Enabled = true;
-            student_number.Enabled = true;
+            student_number_textbox.Enabled = true;
             save_name.Enabled = true;
             save_score.Enabled = true;
-            assignment_score.Enabled = true;
-            enter_assignment.Enabled = true;
+            assignment_score_textbox.Enabled = true;
+            enter_assignment_textbox.Enabled = true;
             display_score.Enabled = true;
-            display_score_text_area.Enabled = true;
+            display_score_richtextbox.Enabled = true;
             save_file_bttn.Enabled = true;
             save_file_textbox.Enabled = true;
 
         }
         private void Disable_Form()
         {
-           
+
+            num_of_assignments.Enabled = true;
+            num_of_students.Enabled = true;
+            submit_count.Enabled = true;
             reset_scores.Enabled = false;
             first_student.Enabled = false;
             previouse_student.Enabled = false;
             next_student.Enabled = false;
             last_student.Enabled = false;
-            student_number.Enabled = false;
+            student_number_textbox.Enabled = false;
             save_name.Enabled = false;
             save_score.Enabled = false;
-            assignment_score.Enabled = false;
-            enter_assignment.Enabled = false;
+            assignment_score_textbox.Enabled = false;
+            enter_assignment_textbox.Enabled = false;
             display_score.Enabled = false;
-            display_score_text_area.Enabled = false;
+            display_score_richtextbox.Enabled = false;
             save_file_bttn.Enabled = false;
             save_file_textbox.Enabled = false;
+
+        }
+
+        private void Populate_Arrays()
+        {
+            for (int i = 0; i < student_num; i++)
+            {
+                student_information[i] = $"Student #{i+1}";
+                for(int t=0; t<assign_num;t++)
+                {
+                    student_assigments[i,t] = 0;
+                }
+            }
 
         }
 

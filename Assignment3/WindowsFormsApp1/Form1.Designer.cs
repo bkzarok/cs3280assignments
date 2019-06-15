@@ -39,7 +39,7 @@
             this.next_student = new System.Windows.Forms.Button();
             this.last_student = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.student_number = new System.Windows.Forms.TextBox();
+            this.student_number_textbox = new System.Windows.Forms.TextBox();
             this.save_name = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,14 +47,14 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.save_score = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.assignment_score = new System.Windows.Forms.TextBox();
-            this.enter_assignment = new System.Windows.Forms.TextBox();
+            this.assignment_score_textbox = new System.Windows.Forms.TextBox();
+            this.enter_assignment_textbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.display_score = new System.Windows.Forms.Button();
-            this.display_score_text_area = new System.Windows.Forms.TextBox();
             this.save_file_bttn = new System.Windows.Forms.Button();
             this.save_file_textbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.display_score_richtextbox = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -167,13 +167,13 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Student #";
             // 
-            // student_number
+            // student_number_textbox
             // 
-            this.student_number.Enabled = false;
-            this.student_number.Location = new System.Drawing.Point(115, 19);
-            this.student_number.Name = "student_number";
-            this.student_number.Size = new System.Drawing.Size(100, 20);
-            this.student_number.TabIndex = 14;
+            this.student_number_textbox.Enabled = false;
+            this.student_number_textbox.Location = new System.Drawing.Point(115, 19);
+            this.student_number_textbox.Name = "student_number_textbox";
+            this.student_number_textbox.Size = new System.Drawing.Size(100, 20);
+            this.student_number_textbox.TabIndex = 14;
             // 
             // save_name
             // 
@@ -216,7 +216,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.student_number);
+            this.groupBox3.Controls.Add(this.student_number_textbox);
             this.groupBox3.Controls.Add(this.save_name);
             this.groupBox3.Location = new System.Drawing.Point(28, 159);
             this.groupBox3.Name = "groupBox3";
@@ -229,8 +229,8 @@
             // 
             this.groupBox4.Controls.Add(this.save_score);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.assignment_score);
-            this.groupBox4.Controls.Add(this.enter_assignment);
+            this.groupBox4.Controls.Add(this.assignment_score_textbox);
+            this.groupBox4.Controls.Add(this.enter_assignment_textbox);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(28, 225);
             this.groupBox4.Name = "groupBox4";
@@ -259,21 +259,21 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Assigment Score:";
             // 
-            // assignment_score
+            // assignment_score_textbox
             // 
-            this.assignment_score.Enabled = false;
-            this.assignment_score.Location = new System.Drawing.Point(151, 58);
-            this.assignment_score.Name = "assignment_score";
-            this.assignment_score.Size = new System.Drawing.Size(100, 20);
-            this.assignment_score.TabIndex = 2;
+            this.assignment_score_textbox.Enabled = false;
+            this.assignment_score_textbox.Location = new System.Drawing.Point(151, 58);
+            this.assignment_score_textbox.Name = "assignment_score_textbox";
+            this.assignment_score_textbox.Size = new System.Drawing.Size(100, 20);
+            this.assignment_score_textbox.TabIndex = 2;
             // 
-            // enter_assignment
+            // enter_assignment_textbox
             // 
-            this.enter_assignment.Enabled = false;
-            this.enter_assignment.Location = new System.Drawing.Point(151, 31);
-            this.enter_assignment.Name = "enter_assignment";
-            this.enter_assignment.Size = new System.Drawing.Size(100, 20);
-            this.enter_assignment.TabIndex = 1;
+            this.enter_assignment_textbox.Enabled = false;
+            this.enter_assignment_textbox.Location = new System.Drawing.Point(151, 31);
+            this.enter_assignment_textbox.Name = "enter_assignment_textbox";
+            this.enter_assignment_textbox.Size = new System.Drawing.Size(100, 20);
+            this.enter_assignment_textbox.TabIndex = 1;
             // 
             // label1
             // 
@@ -294,15 +294,6 @@
             this.display_score.Text = "Display Score";
             this.display_score.UseVisualStyleBackColor = true;
             this.display_score.Click += new System.EventHandler(this.Display_score_Click);
-            // 
-            // display_score_text_area
-            // 
-            this.display_score_text_area.Enabled = false;
-            this.display_score_text_area.Location = new System.Drawing.Point(25, 370);
-            this.display_score_text_area.Multiline = true;
-            this.display_score_text_area.Name = "display_score_text_area";
-            this.display_score_text_area.Size = new System.Drawing.Size(545, 116);
-            this.display_score_text_area.TabIndex = 21;
             // 
             // save_file_bttn
             // 
@@ -332,15 +323,24 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Save File Enter Name:";
             // 
+            // display_score_richtextbox
+            // 
+            this.display_score_richtextbox.Enabled = false;
+            this.display_score_richtextbox.Location = new System.Drawing.Point(28, 387);
+            this.display_score_richtextbox.Name = "display_score_richtextbox";
+            this.display_score_richtextbox.Size = new System.Drawing.Size(641, 117);
+            this.display_score_richtextbox.TabIndex = 25;
+            this.display_score_richtextbox.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 542);
+            this.Controls.Add(this.display_score_richtextbox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.save_file_textbox);
             this.Controls.Add(this.save_file_bttn);
-            this.Controls.Add(this.display_score_text_area);
             this.Controls.Add(this.display_score);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -373,7 +373,7 @@
         private System.Windows.Forms.Button next_student;
         private System.Windows.Forms.Button last_student;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox student_number;
+        private System.Windows.Forms.TextBox student_number_textbox;
         private System.Windows.Forms.Button save_name;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -381,14 +381,14 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button save_score;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox assignment_score;
-        private System.Windows.Forms.TextBox enter_assignment;
+        private System.Windows.Forms.TextBox assignment_score_textbox;
+        private System.Windows.Forms.TextBox enter_assignment_textbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button display_score;
-        private System.Windows.Forms.TextBox display_score_text_area;
         private System.Windows.Forms.Button save_file_bttn;
         private System.Windows.Forms.TextBox save_file_textbox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox display_score_richtextbox;
     }
 }
 
