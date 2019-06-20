@@ -48,48 +48,66 @@ namespace ShapesMidterm.GUI
             // Validate parameters
             // Write ToString() and Area to outputBox
 
+            Shape shape;
             if (squareButton.Checked)
             {
+                
+                
                 try
                 {
+                    
                     int side = Convert.ToInt32(param1TextBox.Text);
-                    outputBox.Text = $"Square: Side = {side} Area = {side * side}\n";
+                    clearTextbox();
+                    shape = new Square(side);
+                    outputBox.Text +=  $"{shape.ToString()} Area = {side * side}\n";
 
 
                 }
                 catch (Exception h)
-                { MessageBox.Show("must enter some text must be number"); }
+                { InvalidInput(); clearTextbox(); }
             }
 
            if (circleButton.Checked)
             {
                 try
                 {
-                    int side = Convert.ToInt32(param1TextBox.Text);
-                    outputBox.Text = $"Circle: Radius = {side} Area = {Math.PI * side * side}\n";
+
+                    
+                    int radius = Convert.ToInt32(param1TextBox.Text);
+                    clearTextbox();
+                    shape = new Circle(radius);
+                    outputBox.Text += $"{shape.ToString()} Area = {Math.PI * radius * radius}\n";
 
 
                 }
                 catch (Exception h)
-                { MessageBox.Show("must enter some text must be number"); }
+                { InvalidInput(); clearTextbox(); }
             }
             if (triangleButton.Checked)
             {
                 try
                 {
+                    
                     int height = Convert.ToInt32(param1TextBox.Text);
                     int base1 = Convert.ToInt32(param2TextBox.Text);
-                    outputBox.Text = $"Triangle : Height = {height} and  Base = {base1} Area = {((height * base1)/2)}\n";
-
+                    clearTextbox();
+                    shape = new Triangle(height, base1);
+                    outputBox.Text += $"{shape.ToString()} Area = {((height * base1)/2)}\n";
+                   
 
                 }
                 catch (Exception h)
-                { MessageBox.Show("must enter some text must be number"); }
+                { InvalidInput(); clearTextbox(); }
             }
                     
 
         }
 
+        private void clearTextbox()
+        {
+            param1TextBox.Text = "";
+            param2TextBox.Text = "";
+        }
         private void InvalidInput()
         {
             errorLabel.Text = "Invalid Input";
