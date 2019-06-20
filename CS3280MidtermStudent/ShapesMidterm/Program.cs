@@ -11,31 +11,31 @@ namespace ShapesMidterm
             Console.WriteLine("2-Triangle: ");
             Console.WriteLine("3-Square: ");
             int tmp = int.Parse(Console.ReadLine());
-            // uncomment after implmenting Circle, Triangle, Square
-            //switch (tmp)
-            //{
-            //    case 1:
-            //        Console.Write("Enter the radius: ");
-            //        var myCircle = new Circle(double.Parse(Console.ReadLine()));
-            //        DisplayShape(myCircle);
-            //        break;
-            //    case 2:
-            //        Console.Write("Enter the base: ");
-            //        var b = double.Parse(Console.ReadLine());
-            //        Console.Write("Enter the height: ");
-            //        var h = double.Parse(Console.ReadLine());
-            //        var myTriangle = new Triangle(h, b);
-            //        DisplayShape(myTriangle);
-            //        break;
-            //    case 3:
-            //        Console.Write("Enter the Side: ");
-            //        var mySquare = new Square(double.Parse(Console.ReadLine()));
-            //        DisplayShape(mySquare);
-            //        break;
-            //    default:
-            //        Console.WriteLine("Invalid Input");
-            //        break;
-            //}
+            //uncomment after implmenting Circle, Triangle, Square
+            switch (tmp)
+            {
+                case 1:
+                    Console.Write("Enter the radius: ");
+                    var myCircle = new Circle(double.Parse(Console.ReadLine()));
+                    DisplayShape(myCircle);
+                    break;
+                case 2:
+                    Console.Write("Enter the base: ");
+                    var b = double.Parse(Console.ReadLine());
+                    Console.Write("Enter the height: ");
+                    var h = double.Parse(Console.ReadLine());
+                    var myTriangle = new Triangle(h, b);
+                    DisplayShape(myTriangle);
+                    break;
+                case 3:
+                    Console.Write("Enter the Side: ");
+                    var mySquare = new Square(double.Parse(Console.ReadLine()));
+                    DisplayShape(mySquare);
+                    break;
+                default:
+                    Console.WriteLine("Invalid Input");
+                    break;
+            }
             Console.Read();
         }
 

@@ -47,6 +47,47 @@ namespace ShapesMidterm.GUI
             // Instantiate Selected Shape and Calculate Area
             // Validate parameters
             // Write ToString() and Area to outputBox
+
+            if (squareButton.Checked)
+            {
+                try
+                {
+                    int side = Convert.ToInt32(param1TextBox.Text);
+                    outputBox.Text = $"Square: Side = {side} Area = {side * side}\n";
+
+
+                }
+                catch (Exception h)
+                { MessageBox.Show("must enter some text must be number"); }
+            }
+
+           if (circleButton.Checked)
+            {
+                try
+                {
+                    int side = Convert.ToInt32(param1TextBox.Text);
+                    outputBox.Text = $"Circle: Radius = {side} Area = {Math.PI * side * side}\n";
+
+
+                }
+                catch (Exception h)
+                { MessageBox.Show("must enter some text must be number"); }
+            }
+            if (triangleButton.Checked)
+            {
+                try
+                {
+                    int height = Convert.ToInt32(param1TextBox.Text);
+                    int base1 = Convert.ToInt32(param2TextBox.Text);
+                    outputBox.Text = $"Triangle : Height = {height} and  Base = {base1} Area = {((height * base1)/2)}\n";
+
+
+                }
+                catch (Exception h)
+                { MessageBox.Show("must enter some text must be number"); }
+            }
+                    
+
         }
 
         private void InvalidInput()
