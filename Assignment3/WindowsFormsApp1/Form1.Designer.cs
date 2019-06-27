@@ -328,7 +328,7 @@
             this.display_score_richtextbox.Enabled = false;
             this.display_score_richtextbox.Location = new System.Drawing.Point(28, 387);
             this.display_score_richtextbox.Name = "display_score_richtextbox";
-            this.display_score_richtextbox.Size = new System.Drawing.Size(641, 117);
+            this.display_score_richtextbox.Size = new System.Drawing.Size(641, 0);
             this.display_score_richtextbox.TabIndex = 25;
             this.display_score_richtextbox.Text = "";
             // 

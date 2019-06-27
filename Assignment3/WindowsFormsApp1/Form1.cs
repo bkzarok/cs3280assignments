@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
             {
                 student_num = Convert.ToInt32(num_of_students.Text);
                
-                if (int.TryParse(num_of_assignments.Text, out assign_num) && assign_num >= 1 && assign_num <= 6)
+                if (int.TryParse(num_of_assignments.Text, out assign_num) && assign_num >= 1  )
                 { 
                     student_information = new string[student_num];
                     student_assigments = new int[student_num, assign_num];
@@ -41,9 +41,9 @@ namespace WindowsFormsApp1
                     Populate_Arrays();
                     student_number_textbox.Text = student_information[0];
                     label6.Text = $"Student #{1}";
-                    display_score_richtextbox.Text =
-                    "Student\t\t\t #1\t#2\t#3\t#4\t#5\tAVG\tGRADE\n";
-                 }
+                    
+
+                }
                 else { throw new Exception(); }
             }
             catch(Exception h){
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
             try
             {
                 int assign_value = 0;
-                if (int.TryParse(enter_assignment_textbox.Text, out assign_value) && assign_value >= 1 && assign_value <= 5)
+                if (int.TryParse(enter_assignment_textbox.Text, out assign_value) && assign_value >= 1 )
                 {
                     student_assigments[nav_student, assign_value - 1]
                        = Convert.ToInt32(assignment_score_textbox.Text);
@@ -186,24 +186,31 @@ namespace WindowsFormsApp1
             }
         }
 
+       
         private void displayScore()
         {
             display_score_richtextbox.Text = "";
             display_score_richtextbox.Text +=
-                   $"Student\t\t\t #1\t#2\t#3\t#4\t#5\tAVG\tGRADE\n";
+                          $"Students\t\t";
+            for (int k = 0; k < assign_num; k++)
+            {
+                display_score_richtextbox.Text +=
+                  $"\t#{k}";
+            }
+            display_score_richtextbox.Text +=
+                  $"\tAVG\tGRADE\n";
+
             for (int i = 0; i < student_num; i++)
             {
-
                 display_score_richtextbox.Text +=
-
-                $"{student_information[i]}" +
-                $"\t\t{student_assigments[i, 0]}" +
-                $"\t{student_assigments[i, 1]}" +
-                $"\t{student_assigments[i, 2]}" +
-                $"\t{student_assigments[i, 3]}" +
-                $"\t{student_assigments[i, 4]}" +
-                $"\t{Avarage(i)}" +
-                $"\t{Grade(Avarage(i))}\n";
+                    $"{student_information[i]}\t\t";
+                for (int t = 0; t < assign_num; t++)
+                {
+                    display_score_richtextbox.Text +=
+                    $"\t{student_assigments[i, t]}";
+                }
+                display_score_richtextbox.Text += $"\t{Avarage(i)}" +
+                    $"\t{Grade(Avarage(i))}\n";
 
             }
         }
