@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.num_of_students = new System.Windows.Forms.TextBox();
@@ -55,6 +56,7 @@
             this.save_file_textbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.display_score_richtextbox = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -325,12 +327,18 @@
             // 
             // display_score_richtextbox
             // 
-            this.display_score_richtextbox.Enabled = false;
-            this.display_score_richtextbox.Location = new System.Drawing.Point(28, 387);
+            this.display_score_richtextbox.Location = new System.Drawing.Point(47, 387);
             this.display_score_richtextbox.Name = "display_score_richtextbox";
-            this.display_score_richtextbox.Size = new System.Drawing.Size(641, 0);
-            this.display_score_richtextbox.TabIndex = 25;
+            this.display_score_richtextbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
+            this.display_score_richtextbox.Size = new System.Drawing.Size(610, 102);
+            this.display_score_richtextbox.TabIndex = 26;
             this.display_score_richtextbox.Text = "";
+            this.display_score_richtextbox.WordWrap = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
@@ -388,7 +396,9 @@
         private System.Windows.Forms.Button save_file_bttn;
         private System.Windows.Forms.TextBox save_file_textbox;
         private System.Windows.Forms.Label label5;
+      
         private System.Windows.Forms.RichTextBox display_score_richtextbox;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

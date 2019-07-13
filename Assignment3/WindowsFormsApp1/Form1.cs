@@ -69,25 +69,27 @@ namespace WindowsFormsApp1
         }
         private void Previouse_student_Click(object sender, EventArgs e)
         {
-            nav_student = nav_student - 1;
-            if (nav_student < 0)
+            
+            if (nav_student <= 0)
             {
             }
             else
             {
+                nav_student = nav_student - 1;
                 student_number_textbox.Text = student_information[nav_student];
                 label6.Text = $"Student #{nav_student+1}";
             }
         }
         private void Next_student_Click(object sender, EventArgs e)
         {
-            nav_student = nav_student + 1;
+           
             
-            if (nav_student > student_num-1)
+            if (nav_student >= student_num-1)
             {
             }
             else
             {
+                nav_student = nav_student + 1;
                 student_number_textbox.Text = student_information[nav_student];
                 label6.Text = $"Student #{nav_student+1}";
             }
@@ -203,7 +205,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < student_num; i++)
             {
                 display_score_richtextbox.Text +=
-                    $"{student_information[i]}\t\t";
+                    $"{student_information[i]}\t   ";
                 for (int t = 0; t < assign_num; t++)
                 {
                     display_score_richtextbox.Text +=
@@ -216,13 +218,12 @@ namespace WindowsFormsApp1
         }
         private double Avarage(int indexrow)
         {
-            double result = (student_assigments[indexrow, 0] +
-                            student_assigments[indexrow, 1] +
-                            student_assigments[indexrow, 2] +
-                            student_assigments[indexrow, 3] +
-                            student_assigments[indexrow, 4]) / 5;
-
-            return result;
+            double result= 0;
+            for (int i = 0; i < assign_num; i++)
+            {
+                result += (student_assigments[indexrow, i]);
+            }
+            return result/assign_num;
         }
 
         private char Grade(double avg)
