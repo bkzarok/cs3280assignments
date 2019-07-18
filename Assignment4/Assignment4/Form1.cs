@@ -204,14 +204,13 @@ namespace Assignment4
                 button22.Text = "X";
                 button22.BackColor = Color.Green;
                 tictac[2, 2] = 'X';
-         
+     
             }
             else
             {
                 button22.Text = "O";
                 button22.BackColor = Color.Yellow;
                 tictac[2, 2] = 'O';
-                
             }
            
         }
