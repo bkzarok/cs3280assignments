@@ -28,153 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBoxA = new System.Windows.Forms.PictureBox();
-            this.pictureBoxB = new System.Windows.Forms.PictureBox();
-            this.pictureBoxC = new System.Windows.Forms.PictureBox();
-            this.pictureBoxD = new System.Windows.Forms.PictureBox();
-            this.radioButtonA = new System.Windows.Forms.RadioButton();
-            this.radioButtonC = new System.Windows.Forms.RadioButton();
-            this.radioButtonB = new System.Windows.Forms.RadioButton();
-            this.radioButtonD = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxD)).BeginInit();
+            this.nextButton2 = new System.Windows.Forms.Button();
+            this.backButton2 = new System.Windows.Forms.Button();
+            this.firstNumLabel = new System.Windows.Forms.Label();
+            this.operatorLabel = new System.Windows.Forms.Label();
+            this.secondNumLabel = new System.Windows.Forms.Label();
+            this.exitFrame2 = new System.Windows.Forms.Button();
+            this.answerTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.questionNum = new System.Windows.Forms.GroupBox();
+            this.questionNum.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // nextButton2
             // 
-            this.button1.Location = new System.Drawing.Point(370, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Next >";
-            this.button1.UseVisualStyleBackColor = true;
+            this.nextButton2.Location = new System.Drawing.Point(330, 280);
+            this.nextButton2.Name = "nextButton2";
+            this.nextButton2.Size = new System.Drawing.Size(127, 35);
+            this.nextButton2.TabIndex = 0;
+            this.nextButton2.Text = "Next >";
+            this.nextButton2.UseVisualStyleBackColor = true;
+            this.nextButton2.Click += new System.EventHandler(this.NextButton2_Click);
             // 
-            // button2
+            // backButton2
             // 
-            this.button2.Location = new System.Drawing.Point(161, 403);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "<back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.backButton2.Location = new System.Drawing.Point(102, 280);
+            this.backButton2.Name = "backButton2";
+            this.backButton2.Size = new System.Drawing.Size(127, 35);
+            this.backButton2.TabIndex = 1;
+            this.backButton2.Text = "<back";
+            this.backButton2.UseVisualStyleBackColor = true;
+            this.backButton2.Click += new System.EventHandler(this.BackButton2_Click);
             // 
-            // pictureBoxA
+            // firstNumLabel
             // 
-            this.pictureBoxA.Location = new System.Drawing.Point(30, 25);
-            this.pictureBoxA.Name = "pictureBoxA";
-            this.pictureBoxA.Size = new System.Drawing.Size(241, 178);
-            this.pictureBoxA.TabIndex = 2;
-            this.pictureBoxA.TabStop = false;
+            this.firstNumLabel.AutoSize = true;
+            this.firstNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNumLabel.Location = new System.Drawing.Point(6, 60);
+            this.firstNumLabel.Name = "firstNumLabel";
+            this.firstNumLabel.Size = new System.Drawing.Size(57, 63);
+            this.firstNumLabel.TabIndex = 2;
+            this.firstNumLabel.Text = "0";
             // 
-            // pictureBoxB
+            // operatorLabel
             // 
-            this.pictureBoxB.Location = new System.Drawing.Point(370, 25);
-            this.pictureBoxB.Name = "pictureBoxB";
-            this.pictureBoxB.Size = new System.Drawing.Size(245, 178);
-            this.pictureBoxB.TabIndex = 3;
-            this.pictureBoxB.TabStop = false;
+            this.operatorLabel.AutoSize = true;
+            this.operatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operatorLabel.Location = new System.Drawing.Point(84, 60);
+            this.operatorLabel.Name = "operatorLabel";
+            this.operatorLabel.Size = new System.Drawing.Size(59, 63);
+            this.operatorLabel.TabIndex = 3;
+            this.operatorLabel.Text = "+";
             // 
-            // pictureBoxC
+            // secondNumLabel
             // 
-            this.pictureBoxC.Location = new System.Drawing.Point(30, 209);
-            this.pictureBoxC.Name = "pictureBoxC";
-            this.pictureBoxC.Size = new System.Drawing.Size(241, 178);
-            this.pictureBoxC.TabIndex = 4;
-            this.pictureBoxC.TabStop = false;
+            this.secondNumLabel.AutoSize = true;
+            this.secondNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondNumLabel.Location = new System.Drawing.Point(159, 60);
+            this.secondNumLabel.Name = "secondNumLabel";
+            this.secondNumLabel.Size = new System.Drawing.Size(57, 63);
+            this.secondNumLabel.TabIndex = 4;
+            this.secondNumLabel.Text = "0";
             // 
-            // pictureBoxD
+            // exitFrame2
             // 
-            this.pictureBoxD.Location = new System.Drawing.Point(368, 209);
-            this.pictureBoxD.Name = "pictureBoxD";
-            this.pictureBoxD.Size = new System.Drawing.Size(245, 178);
-            this.pictureBoxD.TabIndex = 5;
-            this.pictureBoxD.TabStop = false;
+            this.exitFrame2.BackColor = System.Drawing.Color.Red;
+            this.exitFrame2.Location = new System.Drawing.Point(519, 12);
+            this.exitFrame2.Name = "exitFrame2";
+            this.exitFrame2.Size = new System.Drawing.Size(95, 65);
+            this.exitFrame2.TabIndex = 5;
+            this.exitFrame2.Text = "Exit";
+            this.exitFrame2.UseVisualStyleBackColor = false;
+            this.exitFrame2.Click += new System.EventHandler(this.ExitFrame2_Click);
             // 
-            // radioButtonA
+            // answerTextBox
             // 
-            this.radioButtonA.AutoSize = true;
-            this.radioButtonA.Location = new System.Drawing.Point(277, 99);
-            this.radioButtonA.Name = "radioButtonA";
-            this.radioButtonA.Size = new System.Drawing.Size(85, 17);
-            this.radioButtonA.TabIndex = 6;
-            this.radioButtonA.TabStop = true;
-            this.radioButtonA.Text = "radioButton1";
-            this.radioButtonA.UseVisualStyleBackColor = true;
+            this.answerTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox.Location = new System.Drawing.Point(299, 60);
+            this.answerTextBox.Name = "answerTextBox";
+            this.answerTextBox.Size = new System.Drawing.Size(103, 68);
+            this.answerTextBox.TabIndex = 6;
+            this.answerTextBox.TextChanged += new System.EventHandler(this.AnswerTextBox_TextChanged);
             // 
-            // radioButtonC
+            // label1
             // 
-            this.radioButtonC.AutoSize = true;
-            this.radioButtonC.Location = new System.Drawing.Point(277, 274);
-            this.radioButtonC.Name = "radioButtonC";
-            this.radioButtonC.Size = new System.Drawing.Size(85, 17);
-            this.radioButtonC.TabIndex = 7;
-            this.radioButtonC.TabStop = true;
-            this.radioButtonC.Text = "radioButton2";
-            this.radioButtonC.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(234, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 63);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "=";
             // 
-            // radioButtonB
+            // questionNum
             // 
-            this.radioButtonB.AutoSize = true;
-            this.radioButtonB.Location = new System.Drawing.Point(621, 99);
-            this.radioButtonB.Name = "radioButtonB";
-            this.radioButtonB.Size = new System.Drawing.Size(85, 17);
-            this.radioButtonB.TabIndex = 8;
-            this.radioButtonB.TabStop = true;
-            this.radioButtonB.Text = "radioButton3";
-            this.radioButtonB.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonD
-            // 
-            this.radioButtonD.AutoSize = true;
-            this.radioButtonD.Location = new System.Drawing.Point(621, 274);
-            this.radioButtonD.Name = "radioButtonD";
-            this.radioButtonD.Size = new System.Drawing.Size(85, 17);
-            this.radioButtonD.TabIndex = 9;
-            this.radioButtonD.TabStop = true;
-            this.radioButtonD.Text = "radioButton4";
-            this.radioButtonD.UseVisualStyleBackColor = true;
+            this.questionNum.Controls.Add(this.firstNumLabel);
+            this.questionNum.Controls.Add(this.answerTextBox);
+            this.questionNum.Controls.Add(this.label1);
+            this.questionNum.Controls.Add(this.operatorLabel);
+            this.questionNum.Controls.Add(this.secondNumLabel);
+            this.questionNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionNum.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.questionNum.Location = new System.Drawing.Point(55, 29);
+            this.questionNum.Name = "questionNum";
+            this.questionNum.Size = new System.Drawing.Size(428, 206);
+            this.questionNum.TabIndex = 8;
+            this.questionNum.TabStop = false;
+            this.questionNum.Text = "Question: 1/1";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.radioButtonD);
-            this.Controls.Add(this.radioButtonB);
-            this.Controls.Add(this.radioButtonC);
-            this.Controls.Add(this.radioButtonA);
-            this.Controls.Add(this.pictureBoxD);
-            this.Controls.Add(this.pictureBoxC);
-            this.Controls.Add(this.pictureBoxB);
-            this.Controls.Add(this.pictureBoxA);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(635, 338);
+            this.Controls.Add(this.questionNum);
+            this.Controls.Add(this.exitFrame2);
+            this.Controls.Add(this.backButton2);
+            this.Controls.Add(this.nextButton2);
             this.Name = "Form2";
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxD)).EndInit();
+            this.questionNum.ResumeLayout(false);
+            this.questionNum.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBoxA;
-        private System.Windows.Forms.PictureBox pictureBoxB;
-        private System.Windows.Forms.PictureBox pictureBoxC;
-        private System.Windows.Forms.PictureBox pictureBoxD;
-        private System.Windows.Forms.RadioButton radioButtonA;
-        private System.Windows.Forms.RadioButton radioButtonC;
-        private System.Windows.Forms.RadioButton radioButtonB;
-        private System.Windows.Forms.RadioButton radioButtonD;
+        private System.Windows.Forms.Button nextButton2;
+        private System.Windows.Forms.Button backButton2;
+        private System.Windows.Forms.Label firstNumLabel;
+        private System.Windows.Forms.Label operatorLabel;
+        private System.Windows.Forms.Label secondNumLabel;
+        private System.Windows.Forms.Button exitFrame2;
+        private System.Windows.Forms.TextBox answerTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox questionNum;
     }
 }

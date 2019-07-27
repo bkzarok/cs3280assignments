@@ -16,5 +16,26 @@ namespace Assignment5
         {
             InitializeComponent();
         }
+
+        private void ExitFrame2_Click(object sender, EventArgs e)
+        {
+           
+            this.Close();
+        }
+
+        private void BackButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NextButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AnswerTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
