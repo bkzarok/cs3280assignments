@@ -10,17 +10,36 @@ using System.Windows.Forms;
 
 namespace Assignment5
 {
+   
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
         }
 
         Boolean comboSelected = false;
+        Game game;
+        Users users;
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboSelected = true;
+            switch (chooseComboBox.SelectedIndex)
+            {
+                case 0:
+                    game = new Game('+');
+                    break;
+                case 1:
+                    game = new Game('-');
+                    break;
+                case 2:
+                    game = new Game('*');
+                    break;
+                case 3:
+                    game = new Game('/');
+                    break;
+            }
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
@@ -47,18 +66,18 @@ namespace Assignment5
             {
                 try
                 {
-                    
-         
-
+                   
                     int  i = System.Convert.ToInt32(ageTextBox.Text);
+                    users = new Users(i, nameTextBox.Text);
 
                     comboSelected = false;
                     nameTextBox.Text = "";
                     ageTextBox.Text = "";
                     chooseComboBox.SelectedItem = null;
-                  
 
+                  
                     Form2 form2 = new Form2();
+                    
                     form2.Show();
                 }
                 catch (Exception h)
