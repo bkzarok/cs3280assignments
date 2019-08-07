@@ -47,7 +47,7 @@ namespace FinalProject1
         {
             var repomodel = await Repos.LoadRepo(username);
             richTextBox.Document.Blocks.Clear();
-            richTextBox.Document.Blocks.Add(new Paragraph(new Run(repomodel.full_name)));
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(repomodel.owner.login)));
            
         }
 

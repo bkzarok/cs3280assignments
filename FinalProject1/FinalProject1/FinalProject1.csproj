@@ -61,8 +61,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="License.cs" />
+    <Compile Include="Owner.cs" />
     <Compile Include="RepoModel.cs" />
     <Compile Include="Repos.cs" />
+    <Compile Include="RootObject.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
