@@ -61,11 +61,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Author.cs" />
+    <Compile Include="Author2.cs" />
+    <Compile Include="Commit.cs" />
+    <Compile Include="GetCommits.cs" />
+    <Compile Include="Committer.cs" />
+    <Compile Include="Committer2.cs" />
     <Compile Include="License.cs" />
     <Compile Include="Owner.cs" />
-    <Compile Include="RepoModel.cs" />
-    <Compile Include="Repos.cs" />
+    <Compile Include="GetRepos.cs" />
     <Compile Include="RootObject.cs" />
+    <Compile Include="RootOject1.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="Verification.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -1,7 +1,6 @@
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\bin\Debug\FinalProject1.exe.config
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\bin\Debug\FinalProject1.exe
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\bin\Debug\FinalProject1.pdb
-C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\obj\Debug\FinalProject1.csprojAssemblyReference.cache
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\obj\Debug\MainWindow.g.cs
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\obj\Debug\App.g.cs
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\obj\Debug\FinalProject1_MarkupCompile.cache

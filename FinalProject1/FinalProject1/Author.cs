@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace FinalProject1
 {
-    public class RepoModel
+    public class Author
     {
         public string name { get; set; }
-        public string full_name { get; set; }
-
-        
+        public string email { get; set; }
+        public DateTime date { get; set; }
     }
 }

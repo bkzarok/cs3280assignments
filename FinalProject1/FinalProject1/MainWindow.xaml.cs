@@ -27,34 +27,55 @@ namespace FinalProject1
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        //repos button
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text.Equals(""))
+            if (usernametextBox.Text.Equals(""))
+            {
+                MessageBox.Show("Enter a username before requesting data");
+            }
+            else
+            {
+                await getRepos(usernametextBox.Text);
+            }
+            return;
+        }
+
+        //commit button
+        private async void Button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            if (usernametextBox.Text.Equals("") || repotextBox.Text.Equals(""))
             {
                 MessageBox.Show("Enter a username before requesting data");
             }
             else
             {
 
-               
-                
-
+                await getCommit(usernametextBox.Text, repotextBox.Text);
             }
+            return;
         }
 
-
-        private async Task GetURL(string username = "bkzarok")
+        private async Task getRepos(string username)
         {
-            var repomodel = await Repos.LoadRepo(username);
+            var repomodel = await GetRepos.LoadRepo(username);
             richTextBox.Document.Blocks.Clear();
             richTextBox.Document.Blocks.Add(new Paragraph(new Run(repomodel.owner.login)));
            
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private async Task getCommit(string username, string repo)
         {
-            await GetURL();
+            var commitmodel = await GetCommits.LoadCommits(username, repo);
+            richTextBox.Document.Blocks.Clear();
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.commit.author.name)));
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.commit.author.email)));
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.commit.message)));
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.ToString())));
         }
+
+       
+       
     }
    
 }

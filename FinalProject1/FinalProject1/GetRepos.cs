@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject1
 {
-    public static class Repos
+    public static class GetRepos
     {
 
         public static async Task<RootObject> LoadRepo(string username)
