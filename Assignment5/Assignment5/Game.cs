@@ -6,15 +6,43 @@ using System.Threading.Tasks;
 
 namespace Assignment5
 {
-    class Game
+   public class Game
     {
-        public char operation;
-        public Game(char operation) => Operation = Operation;
+        private char operation;
+        private int firstnum;
+        private int secondnum;
+        private int answer;
 
         public char Operation {
    
             get { return operation; }
             set { operation = value; }
+        }
+
+        public int firstNum
+        {
+            get { return firstnum; }
+            set { firstnum = value; }
+        }
+
+        public int secondNum
+        {
+            get { return secondnum; }
+            set { secondnum = value; }
+        }
+
+        public int Answer
+        {
+            get { return answer; }
+            set { answer = value; }
+        }
+
+        public Game(char operation, int firstnum, int secondnum, int answer)
+        {
+            Operation = operation;
+            firstNum = firstnum;
+            secondNum = secondnum;
+            Answer = answer;
         }
     }
 }

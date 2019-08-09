@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Assignment5
 {
-    class Users
+    public class Users
     {
-        public int age;
-        public string name;
+        private int age;
+        private string name;
+        private int score;
         
         public int Age
         {
@@ -28,10 +29,14 @@ namespace Assignment5
             { name = value; }
         }
 
-        public Users(int age, string name)
+        public int Score
+        { get { return score; }
+            set { score = value; }
+        }
+
+        public override string ToString()
         {
-            Age = age;
-            Name = name;
+            return $"User: {name} Age: {age} Score:{score}/10\n";
         }
     }
 }

@@ -29,36 +29,27 @@
         private void InitializeComponent()
         {
             this.nextButton2 = new System.Windows.Forms.Button();
-            this.backButton2 = new System.Windows.Forms.Button();
             this.firstNumLabel = new System.Windows.Forms.Label();
             this.operatorLabel = new System.Windows.Forms.Label();
             this.secondNumLabel = new System.Windows.Forms.Label();
             this.exitFrame2 = new System.Windows.Forms.Button();
             this.answerTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.questionNum = new System.Windows.Forms.GroupBox();
-            this.questionNum.SuspendLayout();
+            this.questionForm = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.questionForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // nextButton2
             // 
+            this.nextButton2.BackColor = System.Drawing.Color.Purple;
             this.nextButton2.Location = new System.Drawing.Point(330, 280);
             this.nextButton2.Name = "nextButton2";
             this.nextButton2.Size = new System.Drawing.Size(127, 35);
             this.nextButton2.TabIndex = 0;
             this.nextButton2.Text = "Next >";
-            this.nextButton2.UseVisualStyleBackColor = true;
+            this.nextButton2.UseVisualStyleBackColor = false;
             this.nextButton2.Click += new System.EventHandler(this.NextButton2_Click);
-            // 
-            // backButton2
-            // 
-            this.backButton2.Location = new System.Drawing.Point(102, 280);
-            this.backButton2.Name = "backButton2";
-            this.backButton2.Size = new System.Drawing.Size(127, 35);
-            this.backButton2.TabIndex = 1;
-            this.backButton2.Text = "<back";
-            this.backButton2.UseVisualStyleBackColor = true;
-            this.backButton2.Click += new System.EventHandler(this.BackButton2_Click);
             // 
             // firstNumLabel
             // 
@@ -108,7 +99,7 @@
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(103, 68);
             this.answerTextBox.TabIndex = 6;
-            this.answerTextBox.TextChanged += new System.EventHandler(this.AnswerTextBox_TextChanged);
+            this.answerTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnswerTextBox_KeyDown);
             // 
             // label1
             // 
@@ -120,35 +111,46 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "=";
             // 
-            // questionNum
+            // questionForm
             // 
-            this.questionNum.Controls.Add(this.firstNumLabel);
-            this.questionNum.Controls.Add(this.answerTextBox);
-            this.questionNum.Controls.Add(this.label1);
-            this.questionNum.Controls.Add(this.operatorLabel);
-            this.questionNum.Controls.Add(this.secondNumLabel);
-            this.questionNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionNum.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.questionNum.Location = new System.Drawing.Point(55, 29);
-            this.questionNum.Name = "questionNum";
-            this.questionNum.Size = new System.Drawing.Size(428, 206);
-            this.questionNum.TabIndex = 8;
-            this.questionNum.TabStop = false;
-            this.questionNum.Text = "Question: 1/1";
+            this.questionForm.Controls.Add(this.firstNumLabel);
+            this.questionForm.Controls.Add(this.answerTextBox);
+            this.questionForm.Controls.Add(this.label1);
+            this.questionForm.Controls.Add(this.operatorLabel);
+            this.questionForm.Controls.Add(this.secondNumLabel);
+            this.questionForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionForm.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.questionForm.Location = new System.Drawing.Point(55, 29);
+            this.questionForm.Name = "questionForm";
+            this.questionForm.Size = new System.Drawing.Size(428, 206);
+            this.questionForm.TabIndex = 8;
+            this.questionForm.TabStop = false;
+            this.questionForm.Text = "Question: 0/0";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.Location = new System.Drawing.Point(519, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 87);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "start";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 338);
-            this.Controls.Add(this.questionNum);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.questionForm);
             this.Controls.Add(this.exitFrame2);
-            this.Controls.Add(this.backButton2);
             this.Controls.Add(this.nextButton2);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.questionNum.ResumeLayout(false);
-            this.questionNum.PerformLayout();
+            this.questionForm.ResumeLayout(false);
+            this.questionForm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -156,13 +158,13 @@
         #endregion
 
         private System.Windows.Forms.Button nextButton2;
-        private System.Windows.Forms.Button backButton2;
         private System.Windows.Forms.Label firstNumLabel;
         private System.Windows.Forms.Label operatorLabel;
         private System.Windows.Forms.Label secondNumLabel;
         private System.Windows.Forms.Button exitFrame2;
         private System.Windows.Forms.TextBox answerTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox questionNum;
+        private System.Windows.Forms.GroupBox questionForm;
+        private System.Windows.Forms.Button button1;
     }
 }
