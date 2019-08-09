@@ -81,5 +81,18 @@ namespace FinalProject1
         public int open_issues { get; set; }
         public int watchers { get; set; }
         public string default_branch { get; set; }
+
+        public override string ToString()
+        {
+            return $"name: {name}\n full_name: {full_name}\n{owner}" +
+                $"\nhtml_url: {html_url}\ndescription: {description}" +
+                $"\nfork: {fork}\nurl: {url}\ncommits_url: {comments_url}" +
+                $"\ncomments_url: {comments_url}\nmerges_url: {merges_url}" +
+                $"pulls_url: {pulls_url}\n{created_at.ToString()}\n{updated_at.ToString()}" +
+                $"\n{pushed_at.ToString()}\nsize: {size}\nstargazers_count: {stargazers_count}" +
+                $"\nwatchers_count: {watchers_count}\nforks_count: {forks_count}" +
+                $"\nopen_issues_count: {open_issues_count}\nforks: {forks}\nopen_issues: {open_issues}" +
+                $"\nwatches: {watchers}";
+        }
     }
 }

@@ -10,5 +10,10 @@ namespace FinalProject1
     {
         public string sha { get; set; }
         public string url { get; set; }
+
+        public override string ToString()
+        {
+            return $"sha: {sha}\nurl: {url}";
+        }
     }
 }

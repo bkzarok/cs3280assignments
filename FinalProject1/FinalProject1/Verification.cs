@@ -12,5 +12,11 @@ namespace FinalProject1
         public string reason { get; set; }
         public string signature { get; set; }
         public string payload { get; set; }
+
+        public override string ToString()
+        {
+            return $"verified: {verified}\nreason: {reason}\nsignature: {signature}" +
+                $"\npayload: {payload}";
+        }
     }
 }

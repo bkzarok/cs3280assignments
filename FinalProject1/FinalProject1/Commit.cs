@@ -18,16 +18,11 @@ namespace FinalProject1
         public Verification verification { get; set; }
 
 
-        public override string ToString()
-        {
-            return $"end of this";
-
-        }
-            /*  public override string ToString()
+              public override string ToString()
               {
                   return $"{author}\n{committer}\nmessage: {message}\n{tree}\nurl: {url}" +
                       $"\ncomment_count {comment_count}\n{verification}";
-              }*/
+              }
         }
 
 }

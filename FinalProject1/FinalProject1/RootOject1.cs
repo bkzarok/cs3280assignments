@@ -21,7 +21,8 @@ namespace FinalProject1
 
         public override string ToString()
         {
-            return $"sha: {sha}\n node_id: {node_id}\n {commit.ToString()}\nurl: {url}";
+            return $"sha: {sha}\n node_id: {node_id}\n {commit.ToString()}\nurl: {url}" +
+                $"\nhtml_url: {html_url}\n comments_url: {comments_url}";
         }
     }
       

@@ -26,5 +26,11 @@ namespace FinalProject1
         public string received_events_url { get; set; }
         public string type { get; set; }
         public bool site_admin { get; set; }
+
+        public override string ToString()
+        {
+            return $"login: {login}\navatar_url: {avatar_url}\nid: {id}\nurl: {url}" +
+                $"\ntype: {type}\nsite_admin: {site_admin}";
+        }
     }
 }

@@ -46,7 +46,7 @@ namespace FinalProject1
         {
             if (usernametextBox.Text.Equals("") || repotextBox.Text.Equals(""))
             {
-                MessageBox.Show("Enter a username before requesting data");
+                MessageBox.Show("Enter a repos name before requesting commit data");
             }
             else
             {
@@ -59,23 +59,26 @@ namespace FinalProject1
         private async Task getRepos(string username)
         {
             var repomodel = await GetRepos.LoadRepo(username);
-            richTextBox.Document.Blocks.Clear();
-            richTextBox.Document.Blocks.Add(new Paragraph(new Run(repomodel.owner.login)));
+            string reposstr = "*******************REPOS********************";
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(reposstr)));
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(repomodel.ToString())));
            
         }
 
         private async Task getCommit(string username, string repo)
         {
             var commitmodel = await GetCommits.LoadCommits(username, repo);
-            richTextBox.Document.Blocks.Clear();
-            richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.commit.author.name)));
-            richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.commit.author.email)));
-            richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.commit.message)));
+
+            string commitsstr = "*******************COMMITS********************";
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitsstr)));
+
             richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.ToString())));
         }
 
-       
-       
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
    
 }

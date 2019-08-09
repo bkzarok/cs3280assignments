@@ -17,3 +17,4 @@ C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\bin\
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\bin\Debug\Newtonsoft.Json.xml
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\obj\Debug\FinalProject1.csproj.CopyComplete
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\FinalProject1\FinalProject1\obj\Debug\FinalProject1.csprojAssemblyReference.cache
