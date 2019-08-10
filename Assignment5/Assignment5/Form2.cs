@@ -22,7 +22,7 @@ namespace Assignment5
         public int correct = 0;
         private static System.Timers.Timer aTimer;
         private static int timer;
-        public Boolean alchecked = false;
+        
 
         public Form2(char operation, Users users,List<Users> listUsers)
         {
@@ -49,9 +49,9 @@ namespace Assignment5
 
         private void NextButton2_Click(object sender, EventArgs e)
         {
-            if (alchecked==false) { checkAnswer();}
+            checkAnswer();
             nextQuestion();
-            alchecked = false;
+           
         }
 
 
@@ -66,7 +66,10 @@ namespace Assignment5
             if (e.KeyCode == Keys.Enter)
             {
                 checkAnswer();
-                alchecked = true;
+                nextQuestion();
+                
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
         private void resetAll()
@@ -91,6 +94,9 @@ namespace Assignment5
             {
                 MessageBox.Show($"Finished and you got {correct} / 10");
                 Form3 form3 = new Form3(correct, timer, users, listUsers);
+                aTimer.Close();
+                aTimer.Dispose();
+                timer = 0;
                 form3.Show();
                 this.Close();
                 
@@ -138,7 +144,7 @@ namespace Assignment5
                     return num1 + num2;
                   
                 case '-':
-                    return num1 - num2;
+                    return Math.Abs(num1 - num2);
                  
                 case '*':
                     return num1 * num2;
