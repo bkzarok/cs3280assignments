@@ -12,10 +12,10 @@
             <ColumnDefinition Width="37*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="usernametextBox" HorizontalAlignment="Left" Height="23" Margin="258,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="getrepoButton" Content="Get Repo" HorizontalAlignment="Left" Margin="472,73,0,0" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.236,2.667" Click="Button_Click" Background="#FF2CB489"/>
-        <Label x:Name="label" Content="Enter Username" HorizontalAlignment="Left" Margin="138,23,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="getcommitButton" Content="Get Commit" HorizontalAlignment="Left" Margin="590,73,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.236,2.667" Click="Button_Copy_Click" Background="#FF3B6BB2"/>
+        <TextBox x:Name="usernametextBox" HorizontalAlignment="Left" Height="23" Margin="231,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+        <Button x:Name="getrepoButton" Content="Get Repo" HorizontalAlignment="Left" Margin="460,53,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.236,2.667" Click="Button_Click" Background="#FF2CB489" Height="40"/>
+        <Label x:Name="label" Content="Enter Username:" HorizontalAlignment="Left" Margin="116,23,0,0" VerticalAlignment="Top" Width="115" FontWeight="Bold"/>
+        <Button x:Name="getcommitButton" Content="Get Commit" HorizontalAlignment="Left" Margin="589,53,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.236,2.667" Click="Button_Copy_Click" Background="#FF3B6BB2" Height="40"/>
         <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="272" Margin="43,134,0,0" VerticalAlignment="Top" Width="712" Grid.ColumnSpan="2">
             <FlowDocument>
                 <Paragraph>
@@ -23,10 +23,10 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Label x:Name="label2" Content="Enter repos if you are Getting Repo" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Enter repos if you are Getting Repo:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="repotextBox" HorizontalAlignment="Left" Height="23" Margin="231,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.502,-0.043"/>
         <Label x:Name="label1" Content="The output will display below in a key pair json format" HorizontalAlignment="Left" Margin="204,98,0,0" VerticalAlignment="Top" Height="31" Width="314"/>
-        <Button x:Name="button" Content="Exit" HorizontalAlignment="Left" Margin="700,9,0,0" VerticalAlignment="Top" Width="79" Height="23" Grid.ColumnSpan="2" Background="#FFC12121" Click="Button_Click_1"/>
+        <Button x:Name="button" Content="Exit" HorizontalAlignment="Left" Margin="719,9,0,0" VerticalAlignment="Top" Width="60" Height="40" Grid.ColumnSpan="2" Background="#FFC12121" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
