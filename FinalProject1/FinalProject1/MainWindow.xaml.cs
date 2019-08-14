@@ -20,11 +20,11 @@ namespace FinalProject1
     /// </summary>
     public partial class MainWindow : Window
     {
+  
         public MainWindow()
         {
             InitializeComponent();
             ApiHelper.InitializeClient();
-            
             
         }
 
@@ -57,13 +57,40 @@ namespace FinalProject1
             return;
         }
 
+        private async void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            if (usernametextBox.Text.Equals("") || repotextBox.Text.Equals(""))
+            {
+                MessageBox.Show("Enter a repos name before requesting commit data");
+            }
+            else
+            {
+
+                await getPulls(usernametextBox.Text, repotextBox.Text);
+            }
+            return;
+        }
+
+        private async Task getPulls(string username, string repo)
+        {
+            var pullsmodel = await GetPulls.LoadPulls(username, repo);
+
+            string pullsstr = "*******************PULLS REQUEST********************";
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(pullsstr)));
+
+            richTextBox.Document.Blocks.Add(new Paragraph(new Run(pullsmodel.ToString())));
+            
+           
+        }
+
+
         private async Task getRepos(string username)
         {
             var repomodel = await GetRepos.LoadRepo(username);
             string reposstr = "*******************REPOS********************";
             richTextBox.Document.Blocks.Add(new Paragraph(new Run(reposstr)));
             richTextBox.Document.Blocks.Add(new Paragraph(new Run(repomodel.ToString())));
-           
+            
         }
 
         private async Task getCommit(string username, string repo)
@@ -74,11 +101,17 @@ namespace FinalProject1
             richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitsstr)));
 
             richTextBox.Document.Blocks.Add(new Paragraph(new Run(commitmodel.ToString())));
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
         }
     }
    

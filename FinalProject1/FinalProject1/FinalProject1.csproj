@@ -67,10 +67,12 @@
     <Compile Include="GetCommits.cs" />
     <Compile Include="Committer.cs" />
     <Compile Include="Committer2.cs" />
+    <Compile Include="GetPulls.cs" />
     <Compile Include="License.cs" />
     <Compile Include="Owner.cs" />
     <Compile Include="GetRepos.cs" />
     <Compile Include="RootObject.cs" />
+    <Compile Include="RootObject2.cs" />
     <Compile Include="RootOject1.cs" />
     <Compile Include="Tree.cs" />
     <Compile Include="Verification.cs" />
