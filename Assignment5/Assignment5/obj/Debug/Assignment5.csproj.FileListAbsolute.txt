@@ -1,0 +1,12 @@
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\bin\Debug\Assignment5.exe.config
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\bin\Debug\Assignment5.exe
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\bin\Debug\Assignment5.pdb
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.csprojAssemblyReference.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.Form1.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.Form2.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.Form3.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.Properties.Resources.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.csproj.GenerateResource.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.csproj.CoreCompileInputs.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.exe
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment5\Assignment5\obj\Debug\Assignment5.pdb

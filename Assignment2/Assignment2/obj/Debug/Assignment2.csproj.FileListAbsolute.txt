@@ -1,0 +1,5 @@
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2\Assignment2\obj\Debug\Assignment2.csprojAssemblyReference.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2\Assignment2\obj\Debug\Assignment2.Form1.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2\Assignment2\obj\Debug\Assignment2.Properties.Resources.resources
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2\Assignment2\obj\Debug\Assignment2.csproj.GenerateResource.cache
+C:\Users\bkzar\Desktop\cs3280\cs3280assignments\Assignment2\Assignment2\obj\Debug\Assignment2.csproj.CoreCompileInputs.cache
